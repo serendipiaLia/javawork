@@ -1,0 +1,9 @@
+package classes;
+
+//참조(래퍼런스) 자료형
+public class Student {
+	//클래스 내부에서는 변수(필드-field)
+	String name;	//학생 이름("홍길동")
+	int studentId;	//학번(101)
+	
+}

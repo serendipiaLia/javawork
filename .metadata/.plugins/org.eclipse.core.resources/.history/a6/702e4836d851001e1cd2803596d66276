@@ -1,0 +1,9 @@
+package overriding.shop;
+//부모클래스
+public class HeadShop {
+
+	public void 된장찌개() {
+		System.out.println("된장찌개 : ");
+	}
+	
+}

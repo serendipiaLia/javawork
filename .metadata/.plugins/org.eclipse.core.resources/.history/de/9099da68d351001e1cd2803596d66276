@@ -1,0 +1,5 @@
+package protectedex.pack2;
+//class A를 상속
+public class D {
+
+}

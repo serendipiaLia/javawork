@@ -1,0 +1,29 @@
+package data;
+
+public class CharType {
+	
+	public static void main(String[] args) {
+		// 문자 자료형 - char, String
+		// 복제 - alt + ctrl + ↓↑
+		// ASCII (American Standard Code for ..)
+		
+		char alpha = 'A'; 
+		System.out.println(alpha); // 출력값 A
+		System.out.println((int)alpha); // 형 변형 후 출력값 65 (아스키코드값)
+		
+		int alpha2 = 66;
+		System.out.println(alpha2); //출력값 66
+		System.out.println((char)alpha2); // 문자형으로 변형 후, 출력값 B
+		
+		// 유니코드 - 16bit : 2Byte
+		char uniCode1 = '한'; // 한 문자 : 홀 따옴표
+		System.out.println(uniCode1);
+		
+		char uniCode2 = '\uD55C';  // 16진수 표기 
+				System.out.println(uniCode2); // 한
+				
+		char uniCode3 = '\uAC00';
+		System.out.println(uniCode3);
+		
+	}
+}

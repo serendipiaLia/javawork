@@ -1,0 +1,17 @@
+package arraycopy;
+
+public class DeepCopy {
+	public static void main(String[] args) {
+		Book[] array1 = new Book[3];
+		Book[] array2 = new Book[3]; 
+		
+		array1[0] = new Book("미생1", "윤태호"); 
+		array1[1] = new Book("미생2", "윤태호");
+		array1[2] = new Book("미생3", "윤태호"); 
+		
+		//기본 생성자로 array2의 객체 생성
+		array2[0] = new Book();
+		
+	} //m
+	
+}

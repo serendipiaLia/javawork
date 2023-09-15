@@ -1,0 +1,8 @@
+package cafe;
+// 음료종류, 수량, 가격
+// 클래스의 3요소 : 필드, 생성자, 메서드
+public class Cafe {
+	
+
+	
+}

@@ -1,0 +1,14 @@
+package mart;
+// 클래스의 3요소 : 필드 , 생성자 , 메서드
+public class Customer { 
+	//고객이름, 고객등급, 고객아이디, 고객 주소, 보너스포인트 , 보너스적립율
+	protected String name;
+	protected String grade;
+	protected String id;
+	protected String address;
+	int point;
+	double ratio;
+	
+	
+	
+}

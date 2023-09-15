@@ -1,0 +1,6 @@
+package overriding.shop;
+// 부모클래스HeadShop 상속받음 
+public class shop1 extends HeadShop {
+	
+	
+}

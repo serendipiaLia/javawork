@@ -1,0 +1,13 @@
+package inheritance.statement;
+
+public class Drink {
+	private String name;	//상품명
+	private int price;		//가격
+	private int count;		//수량
+	
+	public Drink(String name, int price, int count ) {
+		this.name = name;
+		this.price = price;
+		this.count = count;
+	}
+}

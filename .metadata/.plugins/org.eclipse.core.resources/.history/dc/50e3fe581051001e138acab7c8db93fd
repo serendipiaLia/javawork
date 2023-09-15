@@ -1,0 +1,10 @@
+package subjects2;
+
+import reference.subjects.Subject;
+
+public class Student {
+	private int studentId;
+	private String studentName;
+	private Subject[] subjects; //import 할때 reference에서 가져오기 (우리가 사용할거)
+	
+}

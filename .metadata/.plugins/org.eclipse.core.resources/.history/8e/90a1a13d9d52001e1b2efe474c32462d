@@ -1,0 +1,7 @@
+package kr.or.iei.run;	//ch06
+
+public class UserTest {
+	public static void main(String[] args) {
+		
+	}
+}

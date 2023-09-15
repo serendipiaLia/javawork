@@ -1,0 +1,16 @@
+package transport;
+
+//(자료형) 사람 클래스
+public class Person {
+	//필드
+	String name;	//이름
+	int money;		//가진 돈
+	
+	public Person(String name, int money) {	//외부에서 만들어서 가져옴
+		this.name = name;
+		this.money = money;
+	}
+	
+	
+	
+}

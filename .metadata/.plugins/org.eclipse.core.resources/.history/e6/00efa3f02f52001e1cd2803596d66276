@@ -1,0 +1,9 @@
+package fruit;
+
+public class FruitTest {
+	
+	Fruit fruit1 = new Fruit();
+	
+	
+	
+}

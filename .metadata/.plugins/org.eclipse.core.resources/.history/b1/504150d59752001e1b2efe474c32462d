@@ -1,0 +1,23 @@
+package arraycopy;
+
+public class Book {
+	 String bookName;
+	 String author;
+	 
+	 public Book(String bookName, String author) {	 //매개변수 bookName, author
+		 this.bookName = bookName;
+		 this.author = author;
+	 }
+	 
+	 public String getbookName() {
+		 return bookName;
+	 }
+	 
+	 public String getAuthor () {
+		 return author;
+	 }
+	
+	 
+	 
+	 
+}

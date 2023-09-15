@@ -1,0 +1,14 @@
+package basicclass;
+
+public class EqualsTest {
+
+	public static void main(String[] args) {
+		String name1 = new String("손흥민");
+		String name2 = new String("손흥민");
+		
+		//인스턴스(name1과 name2)의 메모리 주소 비교
+		System.out.println(name1 == name2);
+		
+		
+	}
+}

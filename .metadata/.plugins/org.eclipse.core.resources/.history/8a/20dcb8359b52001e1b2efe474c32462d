@@ -1,0 +1,10 @@
+package kr.or.iei.model;	//ch06
+
+//필드, 생성자, 메서드 생성!
+public class User {
+	//필드 : 아이디, 비밀번호, 이름 
+	String id;
+	int password;
+	String name;
+	
+}

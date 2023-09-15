@@ -1,0 +1,8 @@
+package operator;
+//산술 연산자를 사용해서 총점과 평균 구하기 
+public class OperationEx1 {
+	public static void main(String[] args) {
+		
+	}
+
+}

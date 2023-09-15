@@ -1,0 +1,11 @@
+package DIJ03.exercise;
+
+public class Exercise {
+	int num = 10;
+	
+	System.out.println(+num);
+	
+	
+	
+	}
+}

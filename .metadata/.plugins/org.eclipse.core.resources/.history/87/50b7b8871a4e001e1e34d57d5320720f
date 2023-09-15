@@ -1,0 +1,24 @@
+package scores;
+
+import java.util.Scanner;
+
+public class CalcScoreTest {
+
+	public static void main(String[] args) {
+		// 성적 처리 프로그램
+		Scanner sc = new Scanner(System.in);
+		boolean sw = true; //상태변수
+		
+		while(sw) { 
+			System.out.println("===============================");
+			System.out.println("1. 예금 | 2.출금 | 3. 잔고 | 4. 종료");
+			System.out.println("===============================");
+			
+			
+			
+		} // while 끝
+		sc.close();
+		
+	} //m
+	
+}

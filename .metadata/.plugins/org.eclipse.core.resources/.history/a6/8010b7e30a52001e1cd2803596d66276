@@ -1,0 +1,30 @@
+package banking.array;
+
+import java.util.Scanner;
+
+public class BankMain {
+	//계좌를 저장할 배열의 크기 100개로 설정
+	static Account[] accounts = new Account[100];
+	static Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		boolean sw = true;
+		
+		while(sw) {
+			System.out.println("========================================");
+		}
+		
+	}
+	// 계좌 생성
+	
+	
+	// 계좌 목록
+	
+
+	// 입금
+	
+	
+	// 출금
+	
+	// 계좌 검색
+}

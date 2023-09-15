@@ -1,0 +1,10 @@
+package kr.or.iei.run;
+
+public class UserTest {
+
+	public static void main(String[] args) {
+		User user1 = 
+		
+		
+	} //m
+}

@@ -1,0 +1,17 @@
+package data;
+
+public class FloatDoubleType {
+	
+	public static void main(String[] args) {
+		// 실수 자료형
+		float fNum = 1.23456789f;
+		
+		System.out.println(fNum);
+		
+		
+		
+		
+	} //m
+	
+	
+}

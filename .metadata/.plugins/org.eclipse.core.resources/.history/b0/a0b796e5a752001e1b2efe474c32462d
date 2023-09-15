@@ -1,0 +1,29 @@
+package arraycopy;
+
+public class Book {
+	 String bookName;
+	 String author;
+	 
+	 public Book(String bookName, String author) {	 //매개변수 bookName, author
+		 this.bookName = bookName;
+		 this.author = author;
+	 }
+	 
+	 public String getbookName() {
+		 return bookName;
+	 }
+	 
+	 public String getAuthor () {
+		 return author;
+	 }
+	 
+	 //to String으로 객체의 문자열 정보 재정의
+	 
+	 @Override
+	 public String toString() {	 //toString()은 object class
+		 return bookName + ", " + author;
+	 }
+	 
+	 
+	 
+}

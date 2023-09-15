@@ -1,0 +1,26 @@
+package reference.subjects;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		//std1, std2
+		Student std1 = new Student(101, "홍길동");
+		Student std2 = new Student(102, "이나경");
+		
+		
+		//과목 추가
+		std1.koreanSubject("국어", 90);
+		std1.mathSubject("수학", 80);
+		
+		std2.koreanSubject("국어", 90);
+		std2.mathSubject("수학", 80);
+		
+		//학생 정보 출력
+		//std1.showStudentInfo();
+		std2.showStduentInfo();
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,12 @@
+package arraycopy;
+
+public class ArrayCopyTest2 {
+
+	public static void main(String[] args) {
+		// 배열 복사하기 - 문자형 복사
+		char[] arr1 = {'N', 'E', 'T'};
+		
+		
+		
+	}
+}

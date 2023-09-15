@@ -1,0 +1,7 @@
+package polymorphism.fruits;
+
+public class Fruit {
+	//필드
+	String name;	//과일이름 
+	String weight;  //과일의 중량 g
+}
