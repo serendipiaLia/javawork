@@ -1,0 +1,10 @@
+package singleton.car;
+
+public class Car {
+	//필드 
+	private static int serialNum = 1000;
+	private int carNum; // 차량번호 
+	
+	
+	
+}

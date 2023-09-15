@@ -1,0 +1,34 @@
+package typinggame;
+
+import java.util.Scanner;
+
+public class TypingGame {
+	
+	public static void main(String[] args) {
+		// 영어 단어 랜덤하게 화면에 출제되면 타이핑하기!
+		// 오타가 없으면 "통과", 오타가 있으면 "다시도전"
+		// 10문제 수행
+		// 시간 측정
+		
+		String[] words = {"ant", "bear", "chicken", "dog",
+				"elephant", "fox", "giraffe", "horse", "monkey",
+				"Lion", "tiger", "zebra", "panda", "cow", "cat", "pig"};
+		
+		Scanner sc = new Scanner(System.in);
+		
+	//	System.out.println(words.length); // words 수 13
+	
+		int rand = (int)(Math.random()*words.length);
+		String question = words[rand];
+		System.out.println(question); // 출제된 단어
+		
+		//단어 입력
+		String answer = sc.nextLine(); // 사용자 입력
+		
+		
+		sc.close();
+		
+	}
+	
+	
+}

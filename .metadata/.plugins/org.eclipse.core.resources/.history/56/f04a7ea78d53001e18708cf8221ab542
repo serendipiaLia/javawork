@@ -1,0 +1,14 @@
+package singleton.car;
+
+public class CarFactory {
+	private static CarFactory instance; //instance 멤버변수(==필드)
+	
+	private CarFactory() {} // 기본생성자
+	
+	public static CarFactory getInstance() {
+		if(instance == null) {
+			instance = new CarFactory();
+		}
+		return instance;
+	}
+}

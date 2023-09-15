@@ -13,7 +13,6 @@ public class LocalDateTimeTest {
 		System.out.println(now); 
 			//출력값: 2023-09-08T15:10:32.131727200
 		
-		
 		//날짜 / 시간 포맷 설정 "yyyy/MM/dd HH:mm:ss a"
 		DateTimeFormatter dtFormat = 
 				DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss a");
@@ -31,7 +30,6 @@ public class LocalDateTimeTest {
 				DateTimeFormatter.ofPattern("HH:mm:ss a");
 		
 		System.out.println(now.format(timeFormat));
-		
 		
 		//특정 날짜 지정하기
 		LocalDate startDay = LocalDate.of(2023, 8, 1);	//시작일
