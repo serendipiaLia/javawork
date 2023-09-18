@@ -1,5 +1,6 @@
 package customers;
 
+//고객 - VIP고객
 public class VIPCustomer extends Customer{
 	private int agentId;	//전문 상담원 
 	double saleRatio; 	//구매 할인율
@@ -14,6 +15,7 @@ public class VIPCustomer extends Customer{
 		customerGrade = "VIP";
 		saleRatio = 0.1;	
 		bonusRatio = 0.05;	
+		this.agentId = agentId;
 	}
 
 	public void setAgentId(int agentId) {

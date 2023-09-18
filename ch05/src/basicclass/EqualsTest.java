@@ -1,10 +1,9 @@
 package basicclass;
 
-import java.nio.file.spi.FileSystemProvider;
-
 public class EqualsTest {
 
 	public static void main(String[] args) {
+		// String name =  "우영우"; // 스택 영역 
 		String name1 = new String("손흥민");
 		String name2 = new String("손흥민");
 		
@@ -24,6 +23,11 @@ public class EqualsTest {
 		System.out.println(book1 == book2);	//주소비교 : false 
 		System.out.println(book1.equals(book2)); //문자열 비교 : false
 		
+		//book인스턴스의 물리적 주소
+		System.out.println(System.identityHashCode(book1));	
+		System.out.println(System.identityHashCode(book2));
 		
+		//논리적 주소 일치 시킴 - hashCode()사용 : Object 클래스 제공!
+		// ch6>objectequals>HashCodeTest
 	}
 }

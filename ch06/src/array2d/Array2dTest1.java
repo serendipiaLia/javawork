@@ -7,8 +7,8 @@ public class Array2dTest1 {
 		int[][] arr = new int[2][3];
 		
 	//	System.out.println(arr.length); //1차원에서 사용, 결과값 2 (=행의 크기)
-		System.out.println(arr[0].length); 	// 1열의 크기 = 3
-		System.out.println(arr[1].length); 	// 2열의 크기 
+		System.out.println(arr[0].length); 	// 1행의 1열의 크기 = 3
+		System.out.println(arr[1].length); 	// 1행의 2열의 크기 
 		
 		// 전체 출력
 		for(int i=0; i < arr.length; i++) {
@@ -25,6 +25,7 @@ public class Array2dTest1 {
 		arr[1][1] = 5;
 		arr[1][2] = 6;
 		
+		//선언과 함께 초기화
 		int[][] arr2 = {
 				{1, 2, 3},
 				{4, 5, 6}
