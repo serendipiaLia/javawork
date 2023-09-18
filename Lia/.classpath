@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="useful"/>
 	<classpathentry kind="src" path="memo"/>
+	<classpathentry kind="src" path="doitjava"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
