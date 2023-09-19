@@ -12,9 +12,19 @@ public class Customer {
 	
 	
 	//기본생성자 == 디폴트생성자
-	public Customer() {
+/*	public Customer() {
 		grade = "basic"; //고객등급
 		ratio = 0.01; //보너스 적립율
+	} */
+	
+	//매개변수가 있는 생성자
+	public Customer(String name, String id, 
+					String address) {
+		this.name = name;
+		this.id = id;
+		this.address = address;
+		grade = "basic";
+		ratio = 0.01;
 	}
 	
 	public String getName() {
