@@ -23,6 +23,7 @@ public class StringMethods {
 			break;
 		}
 		
+		
 		//subString(첫문자, 끝문자) - 문자열을 추출하는 메서드 : (마지막인덱스-1)
 		String firstNum = 주민번호.substring(0,6);
 		System.out.println(firstNum);

@@ -14,6 +14,14 @@ public class CarTest {
 		Car myCar = new AIcar();
 		myCar.run();
 		
+	/*	//final클래스 checking
+		String msg = "Have a good one!";
+		System.out.println(msg);
+		
+		Integer num = 100;
+		System.out.println(num);
+	*/
+	
 	}
 
 }
