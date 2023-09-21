@@ -1,9 +1,0 @@
-package protectedex.pack1;
-
-public class A {
-	String field;	//필드
-	
-	A(){}	//생성자
-
-	void method() {} //메서드
-}
