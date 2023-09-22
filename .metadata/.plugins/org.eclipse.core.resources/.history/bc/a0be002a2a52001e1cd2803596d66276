@@ -1,5 +1,0 @@
-package student;
-// getter, setter showInfo 학생의 정보를 불러오기 
-public class StudentTest {
-
-}

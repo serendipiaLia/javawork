@@ -1,5 +1,0 @@
-package student;
-// 이름, 학년, 반 
-public class Student {
-
-}

@@ -12,7 +12,7 @@ public class CarMain {
 		myCar.frontLeftTire = new KumTire(); 
 		myCar.frontRightTire = new KumTire();
 		
-		 myCar.run();
+		myCar.run();
 		 
 	/*	KumTire kum1 = new KumTire();
 		KumTire kum2 = new KumTire();
