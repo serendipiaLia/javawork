@@ -39,9 +39,5 @@ public class BoardTest {
 			System.out.println(board.getTitle() + ", " 
 				+ board.getContent() + ", " + board.getWriter());
 		}
-		
-		
-		
 	} //m
-	
 }

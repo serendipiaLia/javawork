@@ -33,9 +33,4 @@ public class Board { // 게시판
 	public String getWriter() {
 		return writer;
 	}
-
-
-	
-	
-	
 }
