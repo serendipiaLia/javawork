@@ -39,6 +39,7 @@ public class StudentStreamTest {
 		
 		//점수가 90점 이상인 학생의 이름을 출력 (민재)
 		//filter() : 어떤 조건에 일치되는 내용을 걸러낼때 사용
+/*		stdStream.filter는 사용불가										*/
 		list.stream().filter(std -> std.getScore() >= 90)
 					 .map(std -> std.getName())
 					 .forEach(s -> System.out.println(s));
