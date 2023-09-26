@@ -25,7 +25,6 @@
     <fullyQualifiedTypeName name="arraylist.dog.Dog"/>
     <fullyQualifiedTypeName name="javax.net.ssl.SSLContext"/>
     <fullyQualifiedTypeName name="arraylist.score.Fruit"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="interfaceex.remocon.RemoteControl"/>
     <fullyQualifiedTypeName name="interfaceex.remocon2.SmartTV"/>
@@ -49,7 +48,14 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="FunctionalInterface.lambdastring.StringConcatImpl"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
+    <fullyQualifiedTypeName name="java.awt.Toolkit"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.lang.Thread.State"/>
+    <fullyQualifiedTypeName name="threads.synchronize.User2Thread"/>
+    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>

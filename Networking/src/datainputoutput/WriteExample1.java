@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-
+//byte단위로 파일쓰기
 public class WriteExample1 {
 
 	public static void main(String[] args) {

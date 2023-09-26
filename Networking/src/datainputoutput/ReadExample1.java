@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-
+//byte단위로 파일 읽기
 public class ReadExample1 {
 
 	public static void main(String[] args) {

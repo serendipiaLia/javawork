@@ -1,5 +1,5 @@
 package banking.array;
-// 중복계좌체킹 수업시간
+
 import java.util.Scanner;
 
 public class BankMain2 {
@@ -11,7 +11,6 @@ public class BankMain2 {
 		boolean sw = true;
 		
 		while(sw) {
-			try {
 			System.out.println("=================================================");
 			System.out.println("1.계좌 생성 | 2. 계좌 목록 | 3. 예금 | 4. 출금 | 5. 종료");
 			System.out.println("=================================================");
@@ -33,10 +32,6 @@ public class BankMain2 {
 			}else {
 				System.out.println("지원되지 않는 기능입니다. 다시 입력해주세요.");
 			}
-			}catch(NumberFormatException e) {
-			//	e.printStackTrace();
-				System.out.println("올바른 숫자를 입력해 주세요.");
-			}
 		} // while 끝
 		System.out.println("프로그램을 종료합니다.");
 		scanner.close();
@@ -49,7 +44,7 @@ public class BankMain2 {
 		System.out.println("--------------------------------");
 		
 		while(true) {
-		try {	
+			
 		System.out.print("계좌번호 : ");
 		String ano = scanner.nextLine();
 		
@@ -72,10 +67,7 @@ public class BankMain2 {
 			}
 			break; //while 빠져나옴
 		}
-		}catch(NumberFormatException e) {
-			//	e.printStackTrace();
-			System.out.println("올바른 숫자를 입력해 주세요.");
-		}
+	
 		} // while 끝
 	}
 	
@@ -101,23 +93,20 @@ public class BankMain2 {
 		System.out.println("입금");
 		System.out.println("--------------------------------");
 		
-	while(true) {	
 		System.out.print("계좌번호 : ");
 		String ano = scanner.nextLine();
+	
+		System.out.print("입금액 : ");
+		int money = Integer.parseInt(scanner.nextLine());
 		
 		//잔고에 더해지는 금액
-		if(findAccount(ano) != null) {
-			System.out.print("입금액 : ");
-			int money = Integer.parseInt(scanner.nextLine());
-		
-			Account account = findAccount(ano);
+		if(findAccount(ano) != null) { //찾는 계좌가 있으면
+			Account account = findAccount(ano);	
 			account.setBalance(account.getBalance() + money);
 			System.out.println("결과 : 정상 처리 되었습니다.");
-			break;
 		}else {
-			System.out.println("결과 : 계좌가 없습니다. 다시 입력해주세요!");
-			}
-		} //while 끝
+			System.out.println("결과 : 계좌가 없습니다.");
+		}
 	}
 	
 	// 출금
@@ -126,23 +115,32 @@ public class BankMain2 {
 		System.out.println("출금");
 		System.out.println("--------------------------------");
 		
-		System.out.print("계좌번호 : ");
-		String ano = scanner.nextLine();
+		while(true) { //계좌번호 재입력
+			System.out.print("계좌번호 : ");
+			String ano = scanner.nextLine();
 	
-		System.out.print("출금액 : ");
-		int money = Integer.parseInt(scanner.nextLine());
-		
-			//잔고에 더해지는 금액
-		if(findAccount(ano) != null) {
-			Account account = findAccount(ano);	
-			if(account.getBalance() >= money) {
-				account.setBalance(account.getBalance() - money);
-				System.out.println("결과 : 정상 처리 되었습니다.");
-			}else { System.out.println("잔액이 부족합니다. 다시 입력하세용!");
-				}
-		}else {
-			System.out.println("결과 : 계좌가 없습니다.");
+			if(findAccount(ano) != null) {
+				while(true) { // 출금액 재입력
+					System.out.print("출금액 : ");
+					int money = Integer.parseInt(scanner.nextLine());
+			
+					//잔고에 더해지는 금액
+					Account account = findAccount(ano);	
+					if(money > account.getBalance()) { //출금액이 잔고보다 많으면
+						System.out.println("잔액이 부족합니다.다시 입력하세요!");
+					}else {
+						account.setBalance(account.getBalance() - money);
+						System.out.println("결과 : 정상 처리 되었습니다.");
+						break;
+					}
+				} // 안쪽 while
+				break;
+			}else{ 
+				System.out.println("계좌가 없습니다. 다시 입력하세요!");
+			}
+			
 		}
+		// 바깥쪽 while 빠져나옴
 	}
 	
 	// 계좌 검색 (입금 : findAccount)
