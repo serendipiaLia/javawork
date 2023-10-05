@@ -12,6 +12,7 @@ public class DataInputOutputStreamTest {
 	
 	public static void main(String[] args) {
 		//정수, 실수, 문자열 쓰기
+		//**파일에 쓴 순서대로 읽어야함!
 		try {
 			//기반 스트림 객체 생성(상대 경로)
 			OutputStream os = new FileOutputStream("data.db");

@@ -7,7 +7,8 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="useful"/>
-	<classpathentry kind="src" path="memo"/>
 	<classpathentry kind="src" path="doitjava"/>
+	<classpathentry kind="src" path="testexercise"/>
+	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

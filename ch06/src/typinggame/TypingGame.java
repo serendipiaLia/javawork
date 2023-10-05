@@ -24,14 +24,13 @@ public class TypingGame {
 		
 		
 		while(n < 11) { //10문제 수행하면 빠져나오기
-		
-			int rand = (int)(Math.random()*words.length);
 			System.out.println("문제" + n);
+			int rand = (int)(Math.random()*words.length);
 			String question = words[rand];
 			System.out.println(question); // 출제된 단어
 			
 			//단어 입력
-			String answer = sc.nextLine(); // 사용자 입력
+			String answer = sc.nextLine(); // 사용자 입력한 단어
 			
 			if(question.equals(answer)) { //.equals 문자열 동등비교!
 				System.out.println("통과!");

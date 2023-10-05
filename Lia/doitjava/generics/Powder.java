@@ -1,6 +1,6 @@
 package generics;
 
-public class Powder {
+public class Powder extends Material{
 	public void doPrinting() {
 		System.out.println("Powder 재료를 출력합니다.");
 	}
