@@ -18,9 +18,9 @@ public class BankArrayList {
 		
 		while(sw) {
 			try {
-			System.out.println("==============================================================");
-			System.out.println("1.계좌 생성 | 2. 계좌 목록 | 3. 예금 | 4. 출금 | 5. 계좌 삭제 | 6. 종료");
-			System.out.println("==============================================================");
+			System.out.println("============================================================================");
+			System.out.println("1.계좌 생성 | 2. 계좌 목록 | 3. 예금 | 4. 출금 | 5. 계좌 삭제 | 6. 계좌 검색 | 7. 종료");
+			System.out.println("============================================================================");
 			System.out.print("선택> ");
 			
 			//메뉴 선택
@@ -37,6 +37,8 @@ public class BankArrayList {
 			}else if(selectNo == 5)	{
 				removeAno();	 // 계좌 삭제
 			}else if(selectNo == 6) {
+				selectAccount();
+			}else if(selectNo == 7) {
 				sw = false;			 //종료
 			}else {
 				System.out.println("지원되지 않는 기능입니다. 다시 입력해주세요.");
@@ -46,16 +48,16 @@ public class BankArrayList {
 				System.out.println("올바른 숫자를 입력해 주세요.");
 			}
 		} // while 
-		System.out.println("프로그램을 종료합니다.");
+		System.out.println("프로그램을 종료합니다."); //7. 계좌종료
 		scanner.close();
 	} // m
 	
 
 	//1. 계좌생성
 	private static void createAccount() {
-		System.out.println("--------------------------------");
+		System.out.println("---------------------------------------------------------------");
 		System.out.println("계좌 생성");
-		System.out.println("--------------------------------");
+		System.out.println("---------------------------------------------------------------");
 		
 		while(true) { 
 			System.out.print("계좌번호(형식:00-00-000) : ");
@@ -91,9 +93,9 @@ public class BankArrayList {
 	
 	//2. 계좌목록
 	private static void getAccountList() {
-		System.out.println("--------------------------------");
+		System.out.println("---------------------------------------------------------------");
 		System.out.println("계좌 목록");
-		System.out.println("--------------------------------");
+		System.out.println("---------------------------------------------------------------");
 	
 		//계좌목록조회
 		for(int i=0; i<accountList.size(); i++) {
@@ -106,9 +108,9 @@ public class BankArrayList {
 	
 	//3. 입금
 	private static void deposit() {
-		System.out.println("--------------------------------");
+		System.out.println("---------------------------------------------------------------");
 		System.out.println("입금");
-		System.out.println("--------------------------------");
+		System.out.println("---------------------------------------------------------------");
 		
 	while(true) {
 		System.out.print("계좌번호 : ");
@@ -132,9 +134,9 @@ public class BankArrayList {
 	
 	//4. 출금
 	private static void withdraw() {
-		System.out.println("--------------------------------");
+		System.out.println("----------------------------------------------------------------");
 		System.out.println("출금");
-		System.out.println("--------------------------------");
+		System.out.println("----------------------------------------------------------------");
 			
 		while(true) { //계좌번호 재입력
 			System.out.print("계좌번호 : ");
@@ -164,18 +166,17 @@ public class BankArrayList {
 	
 	//5.계좌 삭제
 	private static void removeAno() {
-		System.out.println("----------------------------");
+		System.out.println("---------------------------------------------------------------");
 		System.out.println("계좌 삭제");
-		System.out.println("----------------------------");
+		System.out.println("---------------------------------------------------------------");
 		
 		while(true) {
-			System.out.print("삭제할 계좌번호(형식:00-00-000) : ");
+			System.out.print("삭제할 계좌번호(숫자형식:00-00-000) : ");
 			String regExp = "\\d{2}-\\d{2}-\\d{3}"; //정규 표현식
 			String ano = scanner.nextLine();
 			
 			boolean result = Pattern.matches(regExp, ano);
 		
-	
 	if(result) {	
 		Account accountToRemove = findAccount(ano);
 		if (accountToRemove != null) {
@@ -191,7 +192,45 @@ public class BankArrayList {
 		} //while
 	} // removeAno
 	
-	//6.종료
+	//6. (특정한)계좌 검색
+	private static void selectAccount() {
+		//계좌번호와 일치하는 계좌 검색
+		System.out.println("---------------------------------------------------------------");
+		System.out.println("계좌 검색");
+		System.out.println("---------------------------------------------------------------");
+		
+		while(true) {
+			System.out.print("찾는 계좌번호(숫자형식:00-00-000) : ");
+			String regExp = "\\d{2}-\\d{2}-\\d{3}"; //정규 표현식
+			String ano = scanner.nextLine();
+			
+			boolean result = Pattern.matches(regExp, ano);
+			
+			if(result) {	
+				Account account = findAccount(ano);
+				if (account != null) {
+					for(int i=0; i<accountList.size(); i++) {
+						account = accountList.get(i);
+							System.out.println("\n해당 계좌가 있습니다. 계좌 정보▼");
+							System.out.print("계좌번호 : " + account.getAno() + "\t");
+							System.out.print("계좌주 : " + account.getOwner() + "\t");
+							System.out.println("잔고 : " + account.getBalance());
+						} //for
+					break;
+				}else {
+					System.out.println("계좌가 없습니다. 다시 입력하세요.");
+					}
+			}else {
+				System.out.println("올바른 계좌번호 형식이 아닙니다. 다시 입력하세요.");
+					} // 밖 if
+				} //while
+			
+	}
+	
+	
+	
+	
+	// 계좌 찾기
 	private static Account findAccount(String ano) {
 		Account account = null;
 		for(int i=0; i<accountList.size(); i++) {

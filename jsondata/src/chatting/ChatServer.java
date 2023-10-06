@@ -77,6 +77,11 @@ public class ChatServer {
 			//발신자와 동일하면 보내지 말고 다음 클라이언트를 보냄
 			if(sc == sender) continue; 
 			sc.send(json);
+/*
+			if(sc != sender) { 
+			sc.send(json)
+			  }
+ */
 		}
 	}
 	
