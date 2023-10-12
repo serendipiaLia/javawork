@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.time.LocalTime"/>
-    <fullyQualifiedTypeName name="classes.Calculator"/>
-    <fullyQualifiedTypeName name="reference.subjects.Subject"/>
     <fullyQualifiedTypeName name="inheritance.airplane.SuperSonicAirPlane"/>
     <fullyQualifiedTypeName name="inheritance.statement.Alcohol"/>
     <fullyQualifiedTypeName name="protectedex.pack1.A"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.net.DatagramPacket"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
 </qualifiedTypeNameHistroy>
