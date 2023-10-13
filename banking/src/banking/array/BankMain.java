@@ -2,6 +2,8 @@ package banking.array;
 // 중복계좌체킹 챗gpt
 import java.util.Scanner;
 
+import banking.domain.Account;
+
 public class BankMain {
 	//계좌를 저장할 배열의 크기 100개로 설정
 	static Account[] accounts = new Account[100];

@@ -39,7 +39,7 @@ public class BoardSelectTest {
 					
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setString(1, "sky12345");
+			pstmt.setString(1, "apple12345");
 			
 			ResultSet rs = pstmt.executeQuery();
 			List <Board> boardList = new ArrayList<>();
@@ -61,16 +61,19 @@ public class BoardSelectTest {
 					// c하드디스크에 복사 붙여넣기
 					OutputStream os = new FileOutputStream("c:/File/" + board.getBfileName()); 
 					
+			/*		// binary파일 쓰기(저장)메서드 1
 					byte[] data = new byte[1024];
 					while(true) {
 						int num = is.read(data);
 						if(num == -1) break;
 						os.write(data, 0, num); //0번 인덱스부터 num까지 data읽기
 					}
+			*/		
+					is.transferTo(os); //binary파일 쓰기(저장) 메서드 2
+						
 					os.flush();
 					os.close();
 					is.close();
-					
 				}
 			}
 			
@@ -93,6 +96,5 @@ public class BoardSelectTest {
 				}
 			}
 		}
-				
 	} //main
 }

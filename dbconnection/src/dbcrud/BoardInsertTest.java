@@ -1,6 +1,6 @@
 package dbcrud;
 
-import java.sql.Blob;
+import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -32,17 +32,17 @@ public class BoardInsertTest {
 			pstmt = conn.prepareStatement(sql);
 			
 			//물음표(?) 값 지정
-			pstmt.setString(1, "notebook");
-			pstmt.setString(2, "LG Gram notebook");
-			pstmt.setString(3, "sky12345");
+			pstmt.setString(1, "smartphone");
+			pstmt.setString(2, "This is iphone 15pro");
+			pstmt.setString(3, "apple12345");
 				//사진 첨부한 경우
-			//pstmt.setString(4, "notebook.PNG");
-			//pstmt.setBlob(5, new FileInputStream("src/dbcrud/notebook.PNG"));
+			pstmt.setString(4, "iphone.PNG");
+			pstmt.setBlob(5, new FileInputStream("src/dbcrud/iphone.PNG"));
 			
 				//사진 미첨부 경우
-			pstmt.setString(4, null);
-			Blob blob = null;
-			pstmt.setBlob(5, blob);
+		//	pstmt.setString(4, null);
+		//	Blob blob = null;
+		//	pstmt.setBlob(5, blob);
 			
 			
 			//sql 실행 - 메서드
