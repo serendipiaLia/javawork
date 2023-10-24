@@ -7,19 +7,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class BoardExample2 {
+public class BoardMain {
 
 	private Scanner scanner = new Scanner(System.in); 
 	private Connection conn;
 	private PreparedStatement pstmt;
 	
-	private String driverClass = "oracle.jdbc.OracleDriver";
-	private String url = "jdbc:oracle:thin:@localhost:1521/xe";
-	private String user = "c##mydb";
-	private String password = "pwmydb";
+	//db 연결 관련 변수 - 대,소문자 모두 구분
+	private String driverClass = "com.mysql.cj.jdbc.Driver";
+	private String url = "jdbc:mysql://127.0.0.1:3306/mydb?serverTime=Asia/Seoul";
+	private String user = "myuser";
+	private String password = "pwmyuser";
 	
 	// 생성자
-	public BoardExample2() {
+	public BoardMain() {
 		try {
 			Class.forName(driverClass);
 			conn = DriverManager.getConnection(url, user, password);
@@ -34,27 +35,25 @@ public class BoardExample2 {
 	public void list() {
 		System.out.println();
 		System.out.println("[List of posts]");
-		System.out.println("------------------------------------------------------------------------");
-		System.out.printf("%-4s%-12s%-20s%-20s%-20s \n", "no.", "writer", "date", "title", "content");
-		System.out.println("------------------------------------------------------------------------");
+		System.out.println("----------------------------------------------------------------");
+		System.out.printf("%-4s%-12s%-30s%-30s \n", "no.", "writer", "date", "title");
+		System.out.println("----------------------------------------------------------------");
 		
 		//DB - SQL board TABLE 게시글 목록 모두 가져오기
 		try {
-			String sql = "SELECT bno, btitle, bcontent, bwriter, bdate "
-							+ "FROM board ORDER BY bno DESC";
+			String sql = "SELECT * FROM board ORDER BY bno DESC";
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()) { // 게시글이 있는 동안 반복(다음 행으로 이동)
 				Board board = new Board(); // 기본생성자이므로 setter로 부르기
 				board.setBno(rs.getInt("bno"));
 				board.setBwriter(rs.getString("bwriter"));
-				board.setBdate(rs.getDate("bdate"));
+				board.setBdate(rs.getTimestamp("bdate"));
 				board.setBtitle(rs.getString("btitle"));
-				board.setBcontent(rs.getString("bcontent"));
 				
 				// 게시글 출력 (출력문과 순서 같이 맞춰주기)
-				System.out.printf("%-4s%-12s%-20s%-20s%-20s \n" ,  
-					board.getBno(), board.getBwriter(), board.getBdate(), board.getBtitle(), board.getBcontent());
+				System.out.printf("%-4s%-12s%-30s%-30s \n" ,  
+					board.getBno(), board.getBwriter(), board.getBdate(), board.getBtitle());
 				
 			} //while
 			rs.close();
@@ -113,8 +112,8 @@ public class BoardExample2 {
 		
 		//db 작업 - INSERT INTO
 		try {
-			String sql = "INSERT INTO board(bno, btitle, bcontent, bwriter) " 
-					+ "VALUES(seq.NEXTVAL, ?, ?, ?)";
+			String sql = "INSERT INTO board(btitle, bcontent, bwriter) " 
+					+ "VALUES(?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, board.getBtitle()); // 콘솔에서 입력한 제목을 db에 저장
 			pstmt.setString(2, board.getBcontent());
@@ -142,8 +141,7 @@ public class BoardExample2 {
 		
 		//db 작업 - SELECT ~ WHERE 절
 		try {
-			String sql = "SELECT bno, btitle, bcontent, bwriter, bdate "
-					+ "FROM board WHERE bno = ? ";
+			String sql = "SELECT * FROM board WHERE bno = ? ";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, bno);
 			
@@ -154,7 +152,7 @@ public class BoardExample2 {
 				// db의 값을 가져와서 board에 세팅
 				board.setBno(rs.getInt("bno"));
 				board.setBwriter(rs.getString("bwriter"));
-				board.setBdate(rs.getDate("bdate"));
+				board.setBdate(rs.getTimestamp("bdate"));
 				board.setBtitle(rs.getString("btitle"));
 				board.setBcontent(rs.getString("bcontent"));
 				
@@ -274,16 +272,6 @@ public class BoardExample2 {
 				
 				//sql 실행
 				pstmt.executeUpdate();
-				
-				// 글번호가 삭제 후에 이어진 번호로 출력되는 문제 발생 (1부터 초기화)
-				sql = "DROP SEQUENCE seq";
-				pstmt = conn.prepareStatement(sql);
-				pstmt.executeUpdate();
-				
-				sql = "CREATE SEQUENCE seq NOCACHE";
-				pstmt = conn.prepareStatement(sql);
-				pstmt.executeUpdate();
-				
 				pstmt.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -308,7 +296,7 @@ public class BoardExample2 {
 	} // exit
 	
 	public static void main(String[] args) {
-		BoardExample2 board1 = new BoardExample2();
+		BoardMain board1 = new BoardMain();
 		board1.list();
 	}
 } // c

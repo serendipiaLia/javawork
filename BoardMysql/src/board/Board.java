@@ -1,24 +1,19 @@
 package board;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Timestamp;
 
-// dto : 자료 전달 객체 (VO)
 public class Board implements Serializable{
+	private static final long serialVersionUID = 1000L;
 	
-	private static final long serialVerionUID = 1L;
-	
-	//필드
+	// 필드
 	private int bno;
 	private String btitle;
 	private String bcontent;
 	private String bwriter;
-	private Date bdate; // java.util에서 가져오기
+	private Timestamp bdate;
 	
-	// 매개변수 없는 생성자 (기본생성자)
-	public Board() {}
-	
-	//메서드
+	// getter setter
 	public int getBno() {
 		return bno;
 	}
@@ -43,13 +38,11 @@ public class Board implements Serializable{
 	public void setBwriter(String bwriter) {
 		this.bwriter = bwriter;
 	}
-	public Date getBdate() {
+	public Timestamp getBdate() {
 		return bdate;
 	}
-	public void setBdate(Date bdate) {
+	public void setBdate(Timestamp bdate) {
 		this.bdate = bdate;
 	}
-	public static long getSerialverionuid() {
-		return serialVerionUID;
-	}
+	
 }
