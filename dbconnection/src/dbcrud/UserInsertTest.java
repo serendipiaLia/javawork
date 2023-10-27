@@ -13,7 +13,7 @@ public static void main(String[] args) {
 		PreparedStatement pstmt = null; //sql 처리 인터페이스
 		
 		try {
-			//JDBC 드라이버 등록
+			//오라클 JDBC 드라이버 등록
 			Class.forName("oracle.jdbc.OracleDriver");
 			
 			//연결하기 - getConnection(url, user, password)
@@ -33,11 +33,11 @@ public static void main(String[] args) {
 			
 			//물음표(?) 값 지정
 			//배열 아님 - 1부터 시작
-			pstmt.setString(1, "Lia99");
-			pstmt.setString(2, "이나경");
-			pstmt.setString(3, "12345");
-			pstmt.setInt(4, 25);
-			pstmt.setString(5, "lia99@cloud.com");
+			pstmt.setString(1, "admin0000");
+			pstmt.setString(2, "관리자");
+			pstmt.setString(3, "a1234");
+			pstmt.setInt(4, 33);
+			pstmt.setString(5, "admin00009@cloud.com");
 			
 			//sql 실행 - 메서드
 			int rows = pstmt.executeUpdate();

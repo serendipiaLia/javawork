@@ -64,10 +64,10 @@ public static void main(String[] args) {
 	*/		
 			for(User user : userList) {
 				System.out.println("userId : " + user.getUserId());
-				System.out.println("userName : " + user.getUserId());
-				System.out.println("userPassword : " + user.getUserId());
-				System.out.println("userAge : " + user.getUserId());
-				System.out.println("userEmail : " + user.getUserId());
+				System.out.println("userName : " + user.getUserName());
+				System.out.println("userPassword : " + user.getUserPassword());
+				System.out.println("userAge : " + user.getUserAge());
+				System.out.println("userEmail : " + user.getUserEmail());
 				System.out.println("======================");
 			}
 			

@@ -8,7 +8,12 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="useful"/>
 	<classpathentry kind="src" path="doitjava"/>
-	<classpathentry kind="src" path="testexercise"/>
-	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="testex231025"/>
+	<classpathentry kind="src" path="testex231005"/>
+	<classpathentry kind="lib" path="lib/ojdbc11.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
