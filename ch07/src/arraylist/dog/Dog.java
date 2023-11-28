@@ -13,6 +13,4 @@ public class Dog {
 	public String toString() {
 		return name + ", " + type;
 	}
-	
-
 }
